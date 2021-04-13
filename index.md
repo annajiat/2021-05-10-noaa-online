@@ -158,8 +158,8 @@ This block displays the date and links to Google Calendar.
 {% if page.humandate %}
 <p id="when">
   <strong>When:</strong>
-  {{page.humandate}}. <a href="webcal://annajiat.github.io/2021-05-10-noaa-online/test.ics">testcal</a> vs 
-  {% include workshop_calendar.html %}
+  {{page.humandate}}.  
+  <a href="webcal://annajiat.github.io/2021-05-10-noaa-online/EventGoogleCalendar.ics">Add a new Google calendar</a> or <a href="https://calendar.google.com/calendar/embed?src=4sjc8iosqdhu4k8dvr4j541jdk%40group.calendar.google.com&ctz=Asia%2FDhaka">Click on each day & copy event to your existing calendar</a>
 </p>
 {% endif %}
 
