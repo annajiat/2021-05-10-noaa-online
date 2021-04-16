@@ -159,7 +159,7 @@ This block displays the date and links to Google Calendar.
 <p id="when">
   <strong>When:</strong>
   {{page.humandate}}.  
-  <a href="webcal://annajiat.github.io/2021-05-10-noaa-online/EventGoogleCalendar.ics">Add a new Google calendar</a> or <a href="https://calendar.google.com/calendar/embed?src=4sjc8iosqdhu4k8dvr4j541jdk%40group.calendar.google.com&ctz=Asia%2FDhaka">Add to existing Google calendar [click on each day & choose "copy to my calendar"]</a>
+  <a href="https://calendar.google.com/calendar/embed?src=4sjc8iosqdhu4k8dvr4j541jdk%40group.calendar.google.com&ctz=Asia%2FDhaka">Add to Google calendar [click on each day of workshop & choose "copy to my calendar" or click "+ Google Calendar" in bottom right corner]</a>
 </p>
 {% endif %}
 
