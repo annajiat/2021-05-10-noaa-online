@@ -14,7 +14,7 @@ humantime: "Day 1 to 3: 1 pm - 5 pm, <br/>Day 4: 8 am to 12 noon EDT"    # human
 startdate: 2021-05-10      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
 enddate: 2021-05-13        # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
 instructor: ["Jonathan Guyer", "Annajiat Alim Rasel", "Callum Rollo", "Sarah Stamps"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
-helper: ["Lindsay Abrams", "helper two", "helper three"]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
+helper: ["Lindsay Abrams", "Lorraine Heilman", "Mathew Biddle"]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
 email: ["lindsay.abrams@noaa.gov", "guyer@nist.gov", "annajiat@gmail.com", "c.rollo@outlook.com", "dstamps@vt.edu"]    # boxed, comma-separated list of contact email addresses for the host, lead instructor, or whoever else is handling questions, like ["marlyn.wescoff@example.org", "fran.bilas@example.org", "ruth.lichterman@example.org"]
 collaborative_notes: http://pad.carpentries.org/2021-05-10-noaa-online  # optional: URL for the workshop collaborative notes, e.g. an Etherpad or Google Docs document (e.g., https://pad.carpentries.org/2015-01-01-euphoria)
 eventbrite:           # optional: alphanumeric key for Eventbrite registration, e.g., "1234567890AB" (if Eventbrite is being used)
@@ -145,8 +145,8 @@ address.
 </p>
 {% elsif online == "true_private" %}
 <p id="where">
-  <strong>Where:</strong> This training will take place online.
-  The instructors will provide you with the information you will need to connect to this meeting.
+  <strong>Where:</strong> This training will take place online via Google Meet.
+  The host will provide you with the information you will need to connect to this meeting.
 </p>
 {% endif %}
 
@@ -159,7 +159,7 @@ This block displays the date and links to Google Calendar.
 <p id="when">
   <strong>When:</strong>
   {{page.humandate}}.  
-  <a href="webcal://annajiat.github.io/2021-05-10-noaa-online/EventGoogleCalendar.ics">Add a new Google calendar</a> or <a href="https://calendar.google.com/calendar/embed?src=4sjc8iosqdhu4k8dvr4j541jdk%40group.calendar.google.com&ctz=Asia%2FDhaka">Add to existing Google calendar [click on each day & choose "copy to my calendar"]</a>
+  <a href="https://calendar.google.com/calendar/embed?src=4sjc8iosqdhu4k8dvr4j541jdk%40group.calendar.google.com&ctz=Asia%2FDhaka">Add to Google calendar [click on each day of workshop & choose "copy to my calendar" or click "+ Google Calendar" in bottom right corner]</a>
 </p>
 {% endif %}
 
@@ -174,8 +174,7 @@ Modify the block below if there are any special requirements.
     Participants must bring a laptop with a
     Mac, Linux, or Windows operating system (not a tablet, Chromebook, etc.) that they have administrative privileges on.
   {% else %}
-    Participants must have access to a computer with a
-    Mac, Linux, or Windows operating system (not a tablet, Chromebook, etc.) that they have administrative privileges on.
+    Participants must have access to a computer with a Mac, Linux, or Windows operating system (not a tablet, Chromebook, etc.) where they can have the required software installed. If you are using your NOAA-furnished laptop, you may need to work with your IT department to have the software installed. 
   {% endif %}
   They should have a few specific software packages installed (listed <a href="#setup">below</a>).
 </p>
@@ -350,12 +349,13 @@ rows to the table if you wish to break down the schedule
 further. To use this custom schedule here, replace the block
 of code below the Schedule `<h2>` header below with
 `{% include custom-schedule.html %}`.
+{% include swc/schedule.html %}
 {% endcomment %}
 
 <h2 id="schedule">Schedule</h2>
 
 {% if site.carpentry == "swc" %}
-{% include swc/schedule.html %}
+{% include custom-schedule.html %}
 {% elsif site.carpentry == "dc" %}
 {% include dc/schedule.html %}
 {% elsif site.carpentry == "lc" %}
@@ -398,6 +398,9 @@ please preview your site before committing, and make sure to run
   workshop,
   you will need access to software as described below.
   In addition, you will need an up-to-date web browser.
+</p>
+<p>
+	<strong>Please work with your IT department to install the following software on your work laptop, or follow the instructions below to install on a personal laptop.</strong>
 </p>
 <p>
   We maintain a list of common issues that occur during installation as a reference for instructors
